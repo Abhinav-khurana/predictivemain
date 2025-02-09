@@ -1,3 +1,7 @@
+
+
+
+
 from fastapi import FastAPI, UploadFile, File
 import pandas as pd
 import joblib
@@ -7,7 +11,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import IsolationForest
 import joblib
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 app = FastAPI()
 UPLOAD_FOLDER = "/tmp"
